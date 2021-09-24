@@ -15,13 +15,13 @@ public class NakupniKosik {
 
         else{
             for (int i = 0; i < args.length; i++){
-                if(Integer.parseInt(args[i]) <= veci.length){
-                    System.out.println(args[i] + " - " + veci[Integer.parseInt(args[i])] + " - " + ceny[i] + "Kc.");
-                    finalcena += ceny[i];
+                if(Integer.parseInt(args[i]) <= veci.length-1){
+                    System.out.println(args[i] + " - " + veci[Integer.parseInt(args[i])] + " - " + ceny[Integer.parseInt(args[i])] + "Kc.");
+                    finalcena += ceny[Integer.parseInt(args[i])];
                 }
 
                 else{
-                    System.out.println("Nenesel jsem produkt " + args[i]);
+                    System.out.println("Nenasel jsem produkt " + args[i]);
                 }
             }
             System.out.println("Finalni cena je " + finalcena + "Kc.");
